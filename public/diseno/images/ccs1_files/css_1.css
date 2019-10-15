@@ -1,0 +1,58 @@
+
+
+/* el primer ccss*/
+body
+{
+	background-color:; 
+	/*color de fondo*/
+	/*color:red;
+	 /*color de la letra*/
+}
+
+h1,h2 /*para colocar el mismo color a otro h2 colocas coma y h3,h4 etc*/
+{
+	color:#21618C;*/
+	/*text-decoration:underline; sirve para subrayar el texto pero no me funciono*/
+}
+
+p /*para definir una clase coloco .y el nombre de la clase .aprendiendo, en html en <p> por ejemplo*/
+{
+   color: #333333;
+}
+.aprendiendo /*esta clase se la puedo colocar a cualquier otro texto que yo quiera*/
+{
+	color:red;
+}
+#identificador
+{
+	color: #093;
+}
+/*nav ul li /*no tienen coma porque esta declaradas dentro de "nav" tanto ul como li*/
+/*{
+   /*color: pink;
+}
+
+
+/* SEGUNDO CSS*/
+
+
+a 
+{
+   color:#2ECC71;
+
+}
+
+/* NO ME FUNCIONO  a:link /* hace referencia a todos los elementos que tengan un link que nadie a visto es un dato "#"
+{
+   color: red;
+}*/
+
+/* FUNCIONA PERO ME SE DESACTIVA A a:visited 
+{
+	color:yellow;
+}*/
+
+a:hover /*cuando pase el mause cambia de color de fondo sala un cuadro rosado*/
+{
+	background-color: pink;
+}
