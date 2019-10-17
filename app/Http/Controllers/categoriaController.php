@@ -18,7 +18,7 @@ class categoriaController extends Controller
         return view('categoria.index');
     }
 
-    public function create(){
+    public function add(){
         return view('categoria.crear');
     }
 
@@ -27,9 +27,12 @@ class categoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
+        categoria::create($request->all());  
+         // cuiando uno imprime mensajes estos llegan por una variable de session 
+         return redirect('/categoria/agregar')->with("mensaje","Categoria Agregado con exito");
     }
 
     /**
