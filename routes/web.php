@@ -11,9 +11,14 @@
 |
 */
 
+
+//RUTAS PRINCIPALES --------------------------------------------------
 Route::get('/','MainController@index')->name('principal');
 Route::get('/contactanos','ContactoController@index')->name('contacto');
 
+//RUTAS DE CATEGORIA------------------------------------------------
+Route::get('/categoria','categoriaController@index')->name("categorias");
+Route::get('/categoria/agregar','categoriaController@add')->name("categorias_add");
 
 
 //Route::get('prueba','MainController@index')->name('prueba');

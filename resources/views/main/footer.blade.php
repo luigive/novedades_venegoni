@@ -1,13 +1,15 @@
- <script src="js/jquery-1.11.3.min.js"></script>
-
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="js/jquery.easing.min.js"></script>
-    
-    <script src="js/custom.js"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+ <script src="{{asset("diseno/js/jquery-1.11.3.min.js")}}"></script>
+
+    <script src="{{asset("diseno/js/bootstrap.min.js")}}"></script>
+
+    <script src="{{asset("diseno/js/jquery.easing.min.js")}}"></script>
+    
+    <script src="{{asset("diseno/js/custom.js")}}"></script>
 
   @yield('scripts')
 

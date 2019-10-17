@@ -45,7 +45,7 @@
                         <a href="#">Higiene Personal</a>
                     </li>
                      <li class="active">
-                        <a href="#">Iluminacion</a>
+                        <a href="{{route('categorias')}}">Categorias</a>
                     </li>
 
 					<!-- <li class="dropdown">
@@ -68,4 +68,4 @@
     @yield('contenido')
 
 
-    @include('main.footer');
+    @include('main.footer')
