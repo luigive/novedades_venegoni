@@ -11,12 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('principal');
-});
+Route::get('/','MainController@index')->name('principal');
 
 
 
-Route::get('/carrucel', function () {
-    return view('carrucel');
-});
+
+//Route::get('prueba','MainController@index')->name('prueba');
