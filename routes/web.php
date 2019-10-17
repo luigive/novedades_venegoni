@@ -12,7 +12,7 @@
 */
 
 Route::get('/','MainController@index')->name('principal');
-
+Route::get('/contactanos','ContactoController@index')->name('contacto');
 
 
 

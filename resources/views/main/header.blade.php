@@ -57,7 +57,7 @@
 						</ul>
 					</li>
                     <li class="active">
-                        <a href="#">Contacto</a>
+                        <a href="{{route('contacto')}}">Contacto</a>
                     </li>
                 </ul>
                 
