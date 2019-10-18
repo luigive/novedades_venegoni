@@ -15,7 +15,8 @@ class categoriaController extends Controller
      */
     public function index()
     {
-        return view('categoria.index');
+        $categorias = categoria::orderBy('id')->get();
+        return view('categoria.index',compact('categorias'));
     }
 
     public function add(){
@@ -41,9 +42,10 @@ class categoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function update(Request $request, $id)
     {
-        //
+         categoria::findOrFail($id)->update($request->all());
+        return redirect('/categoria')->with("mensaje","Categoria Modificada con exito");
     }
 
     /**
@@ -65,7 +67,8 @@ class categoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $resultado = categoria::findOrFail($id);
+        return view('categoria.crear',compact('resultado'));
     }
 
     /**
@@ -75,10 +78,7 @@ class categoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+
 
     /**
      * Remove the specified resource from storage.

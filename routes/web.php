@@ -20,6 +20,7 @@ Route::get('/contactanos','ContactoController@index')->name('contacto');
 Route::get('/categoria','categoriaController@index')->name("categorias");
 Route::get('/categoria/agregar','categoriaController@add')->name("categorias_add");
 Route::post('/categoria/agregar','categoriaController@create')->name("categorias_guardar");
-
+Route::get('/categoria/editar/{id}','categoriaController@edit')->name("editar_categoria");
+Route::put('/categoria/actualizar/{id}','categoriaController@update')->name("categorias_actualizar");
 
 //Route::get('prueba','MainController@index')->name('prueba');

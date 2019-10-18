@@ -17,19 +17,38 @@
         	@include('categoria.mensaje')
             <div class="panel panel-success" >
                     <div class="panel-heading">
-                        <div class="panel-title">Agregar Categoria</div>
+                        <div class="panel-title">
+                             @if ( @isset($resultado->nombre))
+                                Modificar Categoria
+                                {{$algo = $resultado->nombre}}
+                             @else
+                                Agregar Categoria
+                                {{$algo = ''}}
+                             @endif
+                        </div>
                     </div>     
 
                     <div style="padding-top:30px" class="panel-body" >
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
-                        <form class="form-horizontal" role="form" action="{{route('categorias_guardar')}}" method="POST"  id="form-general" >
-                        	@csrf
+                            @if ( @isset($resultado->nombre))
+                                <form class="form-horizontal" role="form" action="{{route('categorias_actualizar',['id' => $resultado->id])}}" method="POST"  id="form-general" >
+                            @else
+                                <form class="form-horizontal" role="form" action="{{route('categorias_guardar')}}" method="POST"  id="form-general" >
+                            @endif
+
+
+                             @if ( @isset($resultado->nombre))
+                                 @csrf @method('put')
+                             @else
+                                  @csrf
+                             @endif
+                        	
                                     
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <input id="producto" type="text" class="form-control" name="nombre" value="" placeholder="nombre del producto">                                        
+                                <input id="categoria" type="text" class="form-control" name="nombre" value="{{$algo}}" placeholder="nombre del producto">                                        
                             </div>
 
      
