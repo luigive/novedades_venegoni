@@ -12,6 +12,7 @@
 
 @section('scripts')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="{{asset('diseno/js/alerta.js')}}"></script>
 @endsection
 
 
@@ -21,7 +22,7 @@
 	<br>
 <div class="container">
 	@include('categoria.mensaje')
-	<table class="table">
+	<table class="table" id="tabla-data">
 	  <thead class="thead-dark">
 	    <tr>
 	    <th scope="col"># </th>
@@ -47,9 +48,9 @@
         			</a>
         		</td>
         			<td>
-        			<form method="POST" action="{{route('eliminar_categoria', ['id' => $categoria->id])}}" name="form-eliminar">
+        			<form method="POST" action="{{route('eliminar_categoria', ['id' => $categoria->id])}}" name="form-eliminar" id="form-eliminar" name="form-eliminar" class="form-eliminar">
         				@csrf @method("delete")
-        				<button type="submit" ><span class="glyphicon glyphicon-trash"></span></button>
+        				<button type="submit" onclick="preguntar()"><span class="glyphicon glyphicon-trash"></span></button>
         			</form>
         			</td>
         		
