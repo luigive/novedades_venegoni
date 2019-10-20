@@ -22,5 +22,6 @@ Route::get('/categoria/agregar','categoriaController@add')->name("categorias_add
 Route::post('/categoria/agregar','categoriaController@create')->name("categorias_guardar");
 Route::get('/categoria/editar/{id}','categoriaController@edit')->name("editar_categoria");
 Route::put('/categoria/actualizar/{id}','categoriaController@update')->name("categorias_actualizar");
+Route::delete('/categoria/borrar/{id}','categoriaController@delete')->name("eliminar_categoria");
 
 //Route::get('prueba','MainController@index')->name('prueba');

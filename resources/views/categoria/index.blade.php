@@ -9,6 +9,12 @@
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 @endsection
 
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+@endsection
+
+
 @section('contenido')
 	<br>
 	<br>
@@ -20,7 +26,11 @@
 	    <tr>
 	    <th scope="col"># </th>
 	      <th scope="col">Categoria</th>
-	      <th scope="col"> </th>
+	      <th scope="col">
+	      	<a href="{{route('categorias_add')}}" class="btn btn-success btn-md">
+          	  <span class="glyphicon glyphicon-plus"></span>
+      	    </a>
+    	  </th>
 	    </tr>
 
 	  </thead>
@@ -36,6 +46,13 @@
           				<span class="glyphicon glyphicon-pencil"></span>
         			</a>
         		</td>
+        			<td>
+        			<form method="POST" action="{{route('eliminar_categoria', ['id' => $categoria->id])}}" name="form-eliminar">
+        				@csrf @method("delete")
+        				<button type="submit" ><span class="glyphicon glyphicon-trash"></span></button>
+        			</form>
+        			</td>
+        		
 	  		</tr>
 
 	  	@endforeach

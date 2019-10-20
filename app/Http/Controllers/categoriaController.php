@@ -86,8 +86,9 @@ class categoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request,$id)
     {
-        //
+        $resultado = categoria::destroy($id);
+         return redirect('/categoria')->with("mensaje","Categoria Eliminada con exito");
     }
 }

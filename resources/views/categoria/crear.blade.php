@@ -17,7 +17,7 @@
         	@include('categoria.mensaje')
             <div class="panel panel-success" >
                     <div class="panel-heading">
-                        <div class="panel-title">
+                        <div class="panel-title">  
                              @if ( @isset($resultado->nombre))
                                 Modificar Categoria
                                 {{$algo = $resultado->nombre}}
@@ -25,7 +25,13 @@
                                 Agregar Categoria
                                 {{$algo = ''}}
                              @endif
+                        
+                             <a href="{{route('categorias')}}" class="btn btn-primary btn-md">
+                                 <span class="glyphicon glyphicon-repeat"></span>
+                            </a>
+                        
                         </div>
+                        
                     </div>     
 
                     <div style="padding-top:30px" class="panel-body" >
