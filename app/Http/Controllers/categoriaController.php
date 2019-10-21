@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 //aqui importo el modelo de la categoria al controlador para empeazar a usarlo 
 use App\categoria;
+use App\Http\Requests\CategoriaValidation;
 
 class categoriaController extends Controller
 {
@@ -28,7 +29,7 @@ class categoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create(CategoriaValidation $request)
     {
 
         categoria::create($request->all());  

@@ -18,7 +18,7 @@
         });
     }); */
 
-  /*  function preguntar(){
+  /*  function preguntar(){s
         event.preventDefault();
         const form = $(this);
         swal.fire({
@@ -38,9 +38,10 @@
              }
     }*/
 
-
-    function preguntar(){
+//malo
+    function preguntar(id){
         event.preventDefault();
+      //   var valor = str.concat('#form-eliminar',id);
         const swalWithBootstrapButtons = Swal.mixin({
           customClass: {
             confirmButton: 'btn btn-success',

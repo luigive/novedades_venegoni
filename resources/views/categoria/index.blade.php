@@ -50,7 +50,8 @@
         			<td>
         			<form method="POST" action="{{route('eliminar_categoria', ['id' => $categoria->id])}}" name="form-eliminar" id="form-eliminar" name="form-eliminar" class="form-eliminar">
         				@csrf @method("delete")
-        				<button type="submit" onclick="preguntar()"><span class="glyphicon glyphicon-trash"></span></button>
+        				<!-- esto hay que corregirlo el eventyo ya que no elimina correctamente onclick="preguntar($categoria->id)" -->
+        				<button type="submit" onclick="preguntar($categoria->id)"><span class="glyphicon glyphicon-trash"></span></button>
         			</form>
         			</td>
         		
