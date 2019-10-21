@@ -43,7 +43,7 @@ class categoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoriaValidation $request, $id)
     {
          categoria::findOrFail($id)->update($request->all());
         return redirect('/categoria')->with("mensaje","Categoria Modificada con exito");
