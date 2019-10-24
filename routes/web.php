@@ -25,3 +25,8 @@ Route::put('/categoria/actualizar/{id}','categoriaController@update')->name("cat
 Route::delete('/categoria/borrar/{id}','categoriaController@delete')->name("eliminar_categoria");
 
 //Route::get('prueba','MainController@index')->name('prueba');
+
+//Rutas de productos
+Route::get('/productos/crear','ProductoController@create')->name("crear_productos");
+Route::post('/productos/crear','ProductoController@store')->name("guardar_productos");
+Route::get('/productos','ProductoController@index')->name("productos");

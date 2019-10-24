@@ -42,7 +42,7 @@
                         <a href="#">Carteras</a>
                     </li>
                      <li class="active">
-                        <a href="#">Higiene Personal</a>
+                        <a href="{{route('productos')}}">Productos</a>
                     </li>
                      <li class="active">
                         <a href="{{route('categorias')}}">Categorias</a>

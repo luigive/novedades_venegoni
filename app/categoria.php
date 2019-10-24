@@ -11,3 +11,4 @@ class categoria extends Model
      protected $guarded = ['id'];
 
 }
+
